@@ -1,0 +1,46 @@
+{
+  "name": "jetstart-boilerplate",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.points.com:andornaut/jetstart-boilerplate.git"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "jetstart": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import-order-alphabetical": "0.0.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "scripts": {
+    "build": "webpack --mode=development",
+    "build-production": "webpack --mode=production",
+    "format": "prettier-eslint --write \"{src/**/,test/**/./}*.{css,js,json,jsx,md}\"",
+    "precommit": "lint-staged",
+    "server": "webpack-dev-server --mode=development",
+    "static-analysis": "eslint --max-warnings 0 {src,test}/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
